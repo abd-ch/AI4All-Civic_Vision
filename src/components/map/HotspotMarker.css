@@ -1,0 +1,70 @@
+.hotspot-marker-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.hotspot-marker-wrapper:hover {
+  transform: scale(1.15);
+}
+
+.hotspot-marker {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotspot-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-white);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  position: relative;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 0.3;
+  z-index: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.hotspot-label {
+  margin-top: 4px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  background: rgba(245, 240, 235, 0.9);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: -0.01em;
+}

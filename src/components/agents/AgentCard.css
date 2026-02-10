@@ -1,0 +1,52 @@
+.agent-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  transition: box-shadow var(--transition-fast);
+}
+
+.agent-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.agent-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.agent-icon {
+  font-size: var(--text-base);
+  line-height: 1;
+}
+
+.agent-name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  flex: 1;
+}
+
+.score-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.score-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-surface-alt);
+  transition: background-color var(--transition-fast);
+}
+
+.score-dot.active {
+  /* Color is set inline via style prop */
+  opacity: 1;
+}
+
+.agent-feedback {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-text);
+}
